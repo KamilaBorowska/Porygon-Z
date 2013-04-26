@@ -1,0 +1,19 @@
+{
+  "author":       "GlitchMr <glitchmr@myopera.com> (http://glitchmr.github.com)",
+  "name":         "PorygonZ",
+  "description":  "IRC bot that works",
+  "version":      "v0.1.0",
+  "keywords":     [ "irc" ],
+  "bugs":         { "url": "http://github.com/GlitchMr/PorygonZ/issues" },
+  "repository":   { "type": "git", "url": "https://github.com/GlitchMr/PorygonZ.git" },
+  "dependencies": {
+    "coffee-script":     "~1.6",
+    "levenshtein":       "~1",
+    "strsplit":          "~1",
+    "irc":               "~0.3",
+    "underscore":        "~1.4",
+    "underscore.string": "~2.3",
+    "matheval":          "~0",
+    "node-random":       "~0"
+  }
+}

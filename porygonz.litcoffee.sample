@@ -1,0 +1,62 @@
+**porygonz.litcoffee** is the main executable and configuration file
+of PorygonZ IRC bot. It's responsible for running actual code, and
+specifying configuration, such as servers for it. It isn't the most
+friendly kind of configuration file, but I hope it's flexible enough
+for most purposes.
+
+The first step would be to import the container. Because Container is
+name of class contained in `./container`, it's in braces. In JavaScript
+speak, it's `var Container = require('./container).Container`.
+
+    {Container} = require './container'
+
+We have to import servers we need. In most cases, you could want to
+have IRC in your IRC bot (I mean, it's an IRC bot). For development,
+you could want to have a console available.
+
+    {IRC} = require './servers/irc'
+    {Console} = require './servers/console'
+
+Next, we have to add plugins. The plugins are responsible for reacting
+to what user says, and responding to it. Some servers might have per
+channel plugins. For example in IRC, you can load separate plugins
+for channel `#a` and channel `#b`.
+
+By default, the porygon imports `version` plugin. It's almost useless
+plugin that shows current dot-dot-dot version after typing `version`
+command. Of course, you are encouraged to change it.
+
+    {version} = require './plugins/version'
+
+Also, generic handler for command that weren't found. It even gives
+hints if it will find the command that is similar to yours.
+
+    {commandNotFound} = require './plugins/command-not-found'
+
+    plugins =
+      version: version()
+
+Next, we can make server instances wrapped in `Container` objects, and
+store them in `containers` array for convienence.
+
+    containers = [
+      new Container
+        plugins: plugins
+        commandNotFound: commandNotFound()
+        prefix: /SampleBot?\b[:,]?\s*/i
+        server: new IRC
+          server: 'irc.freenode.net'
+          channels: ['#botters-test']
+          nick: 'SampleBot'
+          userName: 'samplebot'
+          realName: 'SampleBot, version'
+      new Container
+        plugins: plugins
+        commandNotFound: commandNotFound()
+        server: new Console
+    ]
+
+After that, we can start every container using `for in` loop.
+
+    for container in containers
+      container.connect()
