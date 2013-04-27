@@ -1,6 +1,7 @@
 {
   "author":       "GlitchMr <glitchmr@myopera.com> (http://glitchmr.github.com)",
   "name":         "PorygonZ",
+  "homepage":     "https://github.com/GlitchMr/PorygonZ",
   "description":  "IRC bot that works",
   "version":      "v0.1.0",
   "license":      "MIT",
