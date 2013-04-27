@@ -5,16 +5,16 @@ friendly kind of configuration file, but I hope it's flexible enough
 for most purposes.
 
 The first step would be to import the container. Because Container is
-name of class contained in `PorygonZ/container`, it's in braces.
+name of class contained in `porygonz/container`, it's in braces.
 
-    {Container} = require 'PorygonZ/container'
+    {Container} = require 'porygonz/container'
 
 We have to import servers we need. In most cases, you could want to
 have IRC in your IRC bot (I mean, it's an IRC bot). For development,
 you could want to have a console available.
 
-    {IRC} = require 'PorygonZ/servers/irc'
-    {Console} = require 'PorygonZ/servers/console'
+    {IRC} = require 'porygonz/servers/irc'
+    {Console} = require 'porygonz/servers/console'
 
 Next, we have to add plugins. The plugins are responsible for reacting
 to what user says, and responding to it. Some servers might have per
@@ -25,7 +25,7 @@ By default, the porygon imports `version` plugin. It's almost useless
 plugin that shows current PorygonZ version after typing `version`
 command. Of course, you are encouraged to change it.
 
-    {version} = require 'PorygonZ/plugins/version'
+    {version} = require 'porygonz/plugins/version'
 
     plugins =
       version: version()
@@ -33,7 +33,7 @@ command. Of course, you are encouraged to change it.
 Also, generic handler for command that weren't found. It even gives
 hints if it will find the command that is similar to yours.
 
-    {commandNotFound} = require 'PorygonZ/plugins/command-not-found'
+    {commandNotFound} = require 'porygonz/plugins/command-not-found'
 
 Next, we can make server instances wrapped in `Container` objects, and
 store them in `containers` array for convienence.
