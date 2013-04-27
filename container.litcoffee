@@ -27,7 +27,7 @@ Convert prefix to RegExp with the anchor at beginning.
         prefix = @config.prefix ? ""
 
         @config.prefix = new RegExp(
-          "^(?:#{prefix.source ? prefix})",
+          "^(?:#{prefix.source ? prefix})(?=\w)",
           if prefix.ignoreCase then "i",
         )
 
