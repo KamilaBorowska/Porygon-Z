@@ -1,1 +1,0 @@
-worker: coffee porygonz.litcoffee

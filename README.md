@@ -25,18 +25,19 @@ by the plugin.
 
 ## Installation
 
-The first step would be to clone the repository, but I assume you know
-how to do this ☺. I mean, it isn't that hard. Next, you have to
-download dependencies using `npm install`.
+Just clone the repository using `npm`. Following command should be able
+to install PorygonZ.
+
+    npm install git://github.com/GlitchMr/PorygonZ.git
 
 You will need to write some code to load plugins of IRC bot, and its
 servers. The source code already contains one, available in the
-[`porygonz.litcoffee.sample`](porygonz.litcoffee.sample) file. You're
-encouraged to copy it to `porygonz.litcoffee` file, so CoffeeScript
-could load it. The `sample` is just here, so you could easily
-pull from git repository, even if you have changed the configuration.
-It's recommended to not change sample, unless you want to have problems
-with pulling in future.
+[`porygonz.litcoffee.sample`](porygonz.litcoffee.sample) file. You are
+encouraged to copy it to some other file ending with `.litcoffee`.
+
+The config file can be put almost anywhere - all it does it running
+actual code that was installed by `npm install` command. It's sort of
+bootstrap, I would say.
 
 Because the configuration file is written in CoffeeScript, you should
 be aware that it cares about indentation. It's also sort of complex,
@@ -84,14 +85,7 @@ here. It's less flexible, but it works. Mostly.
 
 ## Running
 
-    node_modules/coffee-script/bin/coffee porygonz.litcoffee
+You need to have CoffeeScript installed globally. After doing that,
+you can do just.
 
-Alternatively, if you have installed `coffee-script` globally, you can
-simply use it without specifying full path to `coffee`.
-
-If you want a server for running PorygonZ, you could be interested
-with [heroku](https://www.heroku.com/). This IRC bot already contains
-`Procfile` that contains Heroku specific configuration. Only one worker
-dyno is needed (and it should be enough, this bot really doesn't
-require lots of CPU power, unlike certain other programs), and Heroku
-offers one free dyno per app.
+    coffee porygonz.litcoffee
