@@ -81,9 +81,9 @@ of the channels is array, separated by commas.
 
 The prefix is regular expression. It has to be at beginning of the
 message, otherwise bot won't listen. It uses the regular expressions
-syntax. To learn more about them, check out [regular-expressions.info]
-(http://www.regular-expressions.info/). It contains a short tutorial
-for regular expressions.
+syntax. To learn more about them, check out
+[regular-expressions.info](http://www.regular-expressions.info/).
+It contains a short tutorial for regular expressions.
 
 If you still cannot survive regular expressions, you can put string
 here. It's less flexible, but it works. Mostly.
