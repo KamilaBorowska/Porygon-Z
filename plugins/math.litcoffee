@@ -1,6 +1,6 @@
 Complex math evaluator. Uses `matheval` from npm to process equations.
 
-    exports.math = ({hex, binary, octal}) ->
+    exports.math = ({hex, binary, octal} = {}) ->
       self = (expr) ->
         {evaluate} = require 'matheval'
 
