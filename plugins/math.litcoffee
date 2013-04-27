@@ -8,7 +8,7 @@ Evaluate may return SyntaxError.
 
         @respond try
           result = evaluate expr
-          if result
+          if result?
             output = "Result: #{result}"
 
 The infinite result shouldn't be converted to other bases.
