@@ -88,3 +88,7 @@ Running
 
 Alternatively, if you have installed `coffee-script` globally, you can
 simply use it without specifying full path to `coffee`.
+
+If you want a server for running `PorygonZ`, you could be interested
+with [heroku](https://www.heroku.com/). This IRC bot already contains
+`Procfile` that contains Heroku specific configuration.
