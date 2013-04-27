@@ -28,13 +28,13 @@ command. Of course, you are encouraged to change it.
 
     {version} = require './plugins/version'
 
+    plugins =
+      version: version()
+
 Also, generic handler for command that weren't found. It even gives
 hints if it will find the command that is similar to yours.
 
     {commandNotFound} = require './plugins/command-not-found'
-
-    plugins =
-      version: version()
 
 Next, we can make server instances wrapped in `Container` objects, and
 store them in `containers` array for convienence.
