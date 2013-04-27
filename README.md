@@ -25,8 +25,13 @@ by the plugin.
 
 ## Installation
 
-Just clone the repository using `npm`. Following command should be able
-to install PorygonZ.
+If you want to use the stable version, use standard `npm install`
+command.
+
+    npm install PorygonZ
+
+If you want to use development version, just clone the repository using
+`npm`. Following command should be able to install PorygonZ.
 
     npm install git://github.com/GlitchMr/PorygonZ.git
 
