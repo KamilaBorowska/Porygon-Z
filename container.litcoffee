@@ -112,7 +112,7 @@ Gets list of commands for channel or person. If the `channel` argument
 isn't specified, it's assumed to be current channel, or nothing if this
 is private message.
 
-      getCommands: (channel = @response.channel) ->
+      getCommands: (channel = @response?.channel) ->
 
 Return combination of channel commands and general commands. The
 channel list is second because it overwrites entries in generic
