@@ -16,5 +16,11 @@
     "underscore.string": "~2.3",
     "matheval":          "~0",
     "node-random":       "~0"
+  },
+  "devDependencies": {
+    "mocha":             "~1.9"
+  },
+  "scripts": {
+    "test":              "mocha --compilers litcoffee:coffee-script"
   }
 }
