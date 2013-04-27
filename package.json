@@ -22,5 +22,8 @@
   },
   "scripts": {
     "test":              "mocha --compilers litcoffee:coffee-script"
+  },
+  "engines": {
+    "node": "*"
   }
 }
