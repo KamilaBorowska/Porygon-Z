@@ -33,7 +33,7 @@ empty.
           else
             "No output"
         catch e
-          "Error: #{e}"
+          "Error: #{e.message}"
 
 
       self.help = """
