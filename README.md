@@ -1,3 +1,6 @@
+PorygonZ
+========
+
 [![Build Status](https://travis-ci.org/GlitchMr/PorygonZ.png?branch=master)](https://travis-ci.org/GlitchMr/PorygonZ)
 
 The simple IRC bot that sort of works. It contains an IRC server
@@ -5,8 +8,7 @@ support, but can be used without IRC (as REPL). It's very configurable
 by using plugins, and you can even decide whatever command name is used
 by the plugin.
 
-Plugins available
-=================
+## Plugins available
 
 * `randomness`
   * `coin` - throws a coin, while using random.org
@@ -21,8 +23,7 @@ Plugins available
 * `version`
   * `version` - shows pointless version information. Yep.
 
-Installation
-============
+## Installation
 
 The first step would be to clone the repository, but I assume you know
 how to do this ☺. I mean, it isn't that hard. Next, you have to
@@ -44,8 +45,7 @@ monkey punch things while using CoffeeScript syntax. You generally
 shouldn't have to, but sometimes it's needed. Generally, the
 configuration file has two things you would have to change.
 
-Plugins
--------
+### Plugins
 
 The first would be list of plugins, and the second would be
 the list of containers. By default, PorygonZ contains list of plugins
@@ -66,8 +66,7 @@ The `plugins` array contains the list of commands and the plugins
 mapped to it. If you would like that `version` be called like `ver`,
 you could add `ver: version()`.
 
-Servers
--------
+### Servers
 
 The second would be list of servers. By default, this bot joins
 `#botters-test` on Freenode, and enabled REPL. Adding the new servers
@@ -83,8 +82,7 @@ for regular expressions.
 If you still cannot survive regular expressions, you can put string
 here. It's less flexible, but it works. Mostly.
 
-Running
-=======
+## Running
 
     node_modules/coffee-script/bin/coffee porygonz.litcoffee
 
