@@ -51,13 +51,13 @@ The first would be list of plugins, and the second would be
 the list of containers. By default, PorygonZ contains list of plugins
 containing one plugin.
 
-    {version} = require './plugins/version'
+    {version} = require 'PorygonZ/plugins/version'
 
     plugins =
       version: version()
 
-This imports the plugin file `./plugins/version`, and imports the
-function from it called `version`. Every plugin is a function you
+This imports the plugin file `PorygonZ/plugins/version`, and imports
+the function from it called `version`. Every plugin is a function you
 should call to get the function. The reason why you have to call it,
 is that the plugin can be configured. `version` doesn't have any sort
 of configuration, but some plugins, like `math` can have it.
