@@ -33,7 +33,17 @@ empty.
           else
             "No output"
         catch e
-          "Error: #{e.message}"
+
+Errors reported by `matheval` should be `SyntaxError`.
+
+          if e instanceof SyntaxError
+            "Error: #{e.message}"
+
+If they are anything else, something is really wrong, and should be
+rethrown, just to inform the user about the bug.
+
+          else
+            throw e
 
 
       self.help = """
