@@ -12,7 +12,7 @@ order.
           @respond "Commands: #{toSentence Object.keys(@getCommands()).sort()}"
           return
 
-        @respond @config.plugins[command]?.help or 'Help page not found.'
+        @respond @getCommands()[command]?.help or 'Help page not found.'
 
       self.help = """
         Shows help for a plugin. Takes one argument that is name of the command.
