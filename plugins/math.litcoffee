@@ -10,14 +10,18 @@ Evaluate may return SyntaxError.
           result = evaluate expr
           if result
             output = "Result: #{result}"
-            minus = if result < 0 then "-" else ""
-            result = Math.abs result
-            if hex
-              output += ", #{minus}0x#{result.toString(16).toUpperCase()}"
-            if binary
-              output += ", #{minus}0b#{result.toString 2}"
-            if octal
-              output += ", #{minus}0o#{result.toString 8}"
+
+The infinite result shouldn't be converted to other bases.
+
+            if isFinite result
+              minus = if result < 0 then "-" else ""
+              result = Math.abs result
+              if hex
+                output += ", #{minus}0x#{result.toString(16).toUpperCase()}"
+              if binary
+                output += ", #{minus}0b#{result.toString 2}"
+              if octal
+                output += ", #{minus}0o#{result.toString 8}"
 
 Return the final output.
 
