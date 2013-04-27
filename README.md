@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/GlitchMr/PorygonZ.png?branch=master)](https://travis-ci.org/GlitchMr/PorygonZ)
+
 The simple IRC bot that sort of works. It contains an IRC server
 support, but can be used without IRC (as REPL). It's very configurable
 by using plugins, and you can even decide whatever command name is used
