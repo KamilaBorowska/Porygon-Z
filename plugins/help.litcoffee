@@ -8,7 +8,8 @@ bot. The list is sorted because objects don't guarantee any sort of
 order.
 
         if not command
-          @respond "Commands: #{Object.keys(@getCommands()).sort().join ", "}"
+          {toSentence} = require 'underscore.string'
+          @respond "Commands: #{toSentence Object.keys(@getCommands()).sort()}"
           return
 
         @respond @config.plugins[command]?.help or 'Help page not found.'
