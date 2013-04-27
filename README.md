@@ -70,7 +70,7 @@ you could add `ver: version()`.
 ### Servers
 
 The second would be list of servers. By default, this bot joins
-`#botters-test` on Freenode, and enabled REPL. Adding the new servers
+`#botters-test` on Freenode, and enables REPL. Adding the new servers
 would be simply adding new entries that follow the pattern. The list
 of the channels is array, separated by commas.
 
