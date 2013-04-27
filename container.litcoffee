@@ -53,7 +53,7 @@ between people and channels.
       pm: (message, person) ->
         @config.server.pm message, person
 
-Parses event and redirects it to plugins
+Parses event and redirects it to plugins.
 
       parseEvent: (type, event) ->
 
