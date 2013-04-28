@@ -24,7 +24,6 @@ Send the message from REPL to parser.
 
 Monkey patch repl in order to have proper tab completion.
 
-        originalComplete = repl.complete
         repl.complete = (line, callback) =>
 
 If the command has spaces, don't tab complete.
@@ -33,8 +32,12 @@ If the command has spaces, don't tab complete.
             callback null, [[], ""]
             return
 
+Filter only commands that begin with actually inserted line.
+
           commands = Object.keys(@container.getCommands()).filter (command) ->
             line is command.substr 0, line.length
+
+Use callback to return results to REPL itself.
 
           callback null, [commands, line]
 
