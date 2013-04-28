@@ -5,7 +5,7 @@
   "description":  "IRC bot that works",
   "version":      "v0.1.0",
   "license":      "MIT",
-  "keywords":     [ "irc" ],
+  "keywords":     [ "irc", "bot", "irc bot" ],
   "bugs":         { "url": "http://github.com/GlitchMr/PorygonZ/issues" },
   "repository":   { "type": "git", "url": "https://github.com/GlitchMr/PorygonZ.git" },
   "dependencies": {
