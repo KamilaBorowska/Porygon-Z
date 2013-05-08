@@ -15,7 +15,7 @@
     "irc":               "~0.3",
     "underscore":        "~1.4",
     "underscore.string": "~2.3",
-    "matheval":          "~0",
+    "matheval":          "~1",
     "node-random":       "~0"
   },
   "devDependencies": {
