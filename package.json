@@ -3,7 +3,7 @@
   "name":         "porygonz",
   "homepage":     "https://github.com/GlitchMr/PorygonZ",
   "description":  "IRC bot that works",
-  "version":      "v0.1.0",
+  "version":      "v0.1.1",
   "license":      "MIT",
   "keywords":     [ "irc", "bot", "irc bot" ],
   "bugs":         { "url": "http://github.com/GlitchMr/PorygonZ/issues" },
