@@ -19,7 +19,7 @@
     "node-random":       "~0"
   },
   "devDependencies": {
-    "mocha":             "~1.9"
+    "mocha":             "~1.10"
   },
   "scripts": {
     "test":              "mocha --compilers litcoffee:coffee-script"
