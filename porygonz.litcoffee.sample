@@ -17,9 +17,9 @@ you could want to have a console available.
     {Console} = require 'porygonz/servers/console'
 
 Next, we have to add plugins. The plugins are responsible for reacting
-to what user says, and responding to it. Some servers might have per
-channel plugins. For example in IRC, you can load separate plugins
-for channel `#a` and channel `#b`.
+to what user says, and responding to it. Some servers might have
+different plugins for various channels. For example in IRC, you can
+load separate plugins for channel `#a` and channel `#b`.
 
 By default, the porygon imports `version` plugin. It's almost useless
 plugin that shows current PorygonZ version after typing `version`
