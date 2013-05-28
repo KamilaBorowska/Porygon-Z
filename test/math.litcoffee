@@ -46,3 +46,6 @@ Also, check whatever negative 0 works correctly.
 
       it 'should give pi when 0 is negative', ->
         call math(), 'atan2(0, -0)', "Result: #{Math.PI}"
+
+      it 'should be able to return -0 as result', ->
+        call math(everything), '-0', "Result: -0, -0x0, -0b0, -0o0"

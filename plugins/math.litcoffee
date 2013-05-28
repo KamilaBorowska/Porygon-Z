@@ -9,19 +9,26 @@ Evaluate may throw SyntaxError.
         @respond try
           result = evaluate expr
           if result?
-            output = "Result: #{result}"
+
+Checks whatever number is negative, including negative zero. I can
+recognize negative and positive zero by dividing by it. Positive will
+give positive infinity, negative will give negative infinity.
+
+            minus = result > 0 or result is 0 and 1 / result is Infinity
+            minusSign = if minus then "" else "-"
+            result = Math.abs result
+
+            output = "Result: #{minusSign}#{result}"
 
 The infinite result shouldn't be converted to other bases.
 
             if isFinite result
-              minus = if result < 0 then "-" else ""
-              result = Math.abs result
               if hex
-                output += ", #{minus}0x#{result.toString(16).toUpperCase()}"
+                output += ", #{minusSign}0x#{result.toString(16).toUpperCase()}"
               if binary
-                output += ", #{minus}0b#{result.toString 2}"
+                output += ", #{minusSign}0b#{result.toString 2}"
               if octal
-                output += ", #{minus}0o#{result.toString 8}"
+                output += ", #{minusSign}0o#{result.toString 8}"
 
 Return the final output.
 
