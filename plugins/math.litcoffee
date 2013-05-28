@@ -4,7 +4,7 @@ Complex math evaluator. Uses `matheval` from npm to process equations.
       self = (expr) ->
         {evaluate} = require 'matheval'
 
-Evaluate may return SyntaxError.
+Evaluate may throw SyntaxError.
 
         @respond try
           result = evaluate expr
