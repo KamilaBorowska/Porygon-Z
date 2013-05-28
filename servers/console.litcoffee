@@ -14,7 +14,10 @@ Start REPL session with special eval.
         repl = require('repl').start
           eval: (message, context, filename, @callback) =>
 
-The hack, because REPL expects JavaScript code.
+I remove parens, because REPL expects JavaScript code, as it was
+intended to be used with JavaScript code. As I still have JavaScript
+mode enabled (because I want tab completion), I have to remove this
+hack from result.
 
             message = message.replace(/^\(/, "").replace /\n\)$/, ""
 
