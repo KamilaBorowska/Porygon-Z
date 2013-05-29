@@ -30,7 +30,7 @@ fake typing, for example), but bot should never respond to errors.
           if messageText?
             message = user: stanza.attrs.from, message: messageText
             @emit 'message', message
-          else if stanza.attrs.type isnt 'error'
+          else if stanza.is('message') and stanza.attrs.type isnt 'error'
             stanza.attrs.to = stanza.attrs.from
             delete stanza.attrs.from
 
