@@ -21,15 +21,22 @@ The bot should mark itself as online.
 
         @client.on 'stanza', (stanza) =>
 
-The message might not have text (for example, presence messages).
+The message might not have text (for example, presence messages). If
+then, just echo it, so it would appear that PorygonZ listens to you (by
+fake typing, for example), but bot should never respond to errors.
 
           messageText = stanza.getChildText 'body'
-          return unless messageText?
 
-But if it does, process it.
+          if messageText?
+            message = user: stanza.attrs.from, message: messageText
+            @emit 'message', message
+          else if stanza.attrs.type isnt 'error'
+            stanza.attrs.to = stanza.attrs.from
+            delete stanza.attrs.from
 
-          message = user: stanza.attrs.from, message: messageText
-          @emit 'message', message
+I'm evil echo server, and I reply to you with your status.
+
+            @client.send stanza
 
       pm: (messageText, person) ->
         message = to: person, type: 'chat'
