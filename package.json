@@ -2,10 +2,10 @@
   "author":       "GlitchMr <glitchmr@myopera.com> (http://glitchmr.github.com)",
   "name":         "porygonz",
   "homepage":     "https://github.com/GlitchMr/PorygonZ",
-  "description":  "IRC bot that works",
+  "description":  "IRC/XMPP bot that works",
   "version":      "v0.1.1",
   "license":      "MIT",
-  "keywords":     [ "irc", "bot", "irc bot" ],
+  "keywords":     [ "irc", "bot", "irc bot", "xmpp", "jabber", "xmpp bot", "jabber bot" ],
   "bugs":         { "url": "http://github.com/GlitchMr/PorygonZ/issues" },
   "repository":   { "type": "git", "url": "https://github.com/GlitchMr/PorygonZ.git" },
   "dependencies": {
