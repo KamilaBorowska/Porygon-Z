@@ -1,8 +1,9 @@
 **porygonz.litcoffee** is the main executable and configuration file
-of PorygonZ IRC bot. It's responsible for running actual code, and
-specifying configuration, such as servers for it. It isn't the most
-friendly kind of configuration file, but I hope it's flexible enough
-for most purposes.
+of PorygonZ IRC bot. Well, it was initially an IRC bot. During
+development, it also got XMPP support. It's responsible for running
+actual code, and specifying configuration, such as servers for it.
+It isn't the most friendly kind of configuration file, but I hope it's
+flexible enough for most purposes.
 
 The first step would be to import the container. Because Container is
 name of class contained in `porygonz/container`, it's in braces.
