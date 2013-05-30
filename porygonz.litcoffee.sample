@@ -16,6 +16,11 @@ you could want to have a console available.
     {IRC} = require 'porygonz/servers/irc'
     {Console} = require 'porygonz/servers/console'
 
+Also, some might want to have XMPP support. Uncomment this comment to
+get XMPP support.
+
+    # {XMPP} = require 'porygonz/servers/xmpp'
+
 Next, we have to add plugins. The plugins are responsible for reacting
 to what user says, and responding to it. Some servers might have
 different plugins for various channels. For example in IRC, you can
@@ -49,10 +54,21 @@ store them in `containers` array for convienence.
           nick: 'SampleBot'
           userName: 'samplebot'
           realName: 'SampleBot, version'
+
       new Container
         plugins: plugins
         commandNotFound: commandNotFound()
         server: new Console
+
+XMPP container needs some setup (like creating initial account), so
+it's commented out by default.
+
+    # new Container
+    #   plugins: plugins
+    #   commandNotFound: commandNotFound()
+    #   server: new XMPP
+    #     jid: 'example@example.com'
+    #     password: 'password'
     ]
 
 After that, we can start every container using `for in` loop.
