@@ -28,9 +28,6 @@ conferences was specified in the configuration.
             @client.send new Element 'presence', to: conference
 
         @client.on 'stanza', (stanza) =>
-
-          console.log require('util').inspect stanza, depth: null
-
           {type, from} = stanza.attrs
 
 The message might not have text (for example, presence messages). If
