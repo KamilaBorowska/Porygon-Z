@@ -3,10 +3,12 @@ PorygonZ
 
 [![Build Status](https://travis-ci.org/GlitchMr/PorygonZ.png?branch=master)](https://travis-ci.org/GlitchMr/PorygonZ)
 
-The simple IRC bot that sort of works. It contains an IRC server
-support, but can be used without IRC (as REPL). It's very configurable
-by using plugins, and you can even decide whatever command name is used
-by the plugin.
+The simple bot that sort of works. Initially, it was just an IRC bot,
+but in later releases it got XMPP support. It contains an IRC server
+support, but can be used without IRC (as REPL). Also, it supports XMPP
+servers, so you can easily make a bot for Internet Messaging. It's very
+configurable by using plugins, and you can even decide whatever command
+names are used by the plugin.
 
 ## Plugins available
 
@@ -86,7 +88,9 @@ syntax. To learn more about them, check out
 It contains a short tutorial for regular expressions.
 
 If you still cannot survive regular expressions, you can put string
-here. It's less flexible, but it works. Mostly.
+here. It's less flexible, but it works. Mostly. Please note that
+prefixes are only needed for conferences/channels, but they are removed
+automatically if you will use them anyway in private messages.
 
 ## Running
 
