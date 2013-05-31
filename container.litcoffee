@@ -84,6 +84,10 @@ magical automatically removed properties.
 
         container = Object.create this
 
+Gets commands for current type of message.
+
+        container.response = event
+
 `respond` method is responsible for responding to the person who
 triggered the message. `type` may only contain `channel` or `message`.
 
@@ -108,10 +112,6 @@ Remove prefix at beginning of line. Leave function quickly if `type` is
           ""
 
         return if type is 'channel' and not removed
-
-Gets commands for current type of message.
-
-        container.response = event
 
 Generate storage if it doesn't exist.
 
