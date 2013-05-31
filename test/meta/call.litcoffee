@@ -3,6 +3,7 @@ callback when getting the result.
 
     exports.call = (plugin, argument, callback, extraOptions = {}) ->
       {extend} = require 'underscore'
+      assert = require 'assert'
 
 The callback can be a function (that will be called and is expected to
 call `assert`), a regular expression (it checks whatever it matches it,
@@ -22,7 +23,6 @@ If it isn't RegExp, check whatever it is equal.
 
       else if typeof callback isnt 'function'
         callback = (result) ->
-          assert = require 'assert'
           assert.equal result, expectedResult
 
       plugin.call extend(extraOptions, respond: callback), argument
