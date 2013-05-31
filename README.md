@@ -28,6 +28,9 @@ names are used by the plugin.
   * `tell` - informs other users when they are away.
   * `tellCheck` - event parser to actually inform users. Needed if you
     want `tell` that actually does work.
+* `pug`
+  * `pug` - returns a cute puppy. Based on [hubot's implementation]
+    (https://github.com/github/hubot/blob/master/src/scripts/pugme.coffee).
 
 ## Installation
 

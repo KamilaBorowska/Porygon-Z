@@ -18,7 +18,8 @@
     "matheval":          "~1",
     "node-random":       "~0",
     "node-xmpp":         "~0.4",
-    "jugglingdb":        "~0.2"
+    "jugglingdb":        "~0.2",
+    "request":           "~2.21"
   },
   "devDependencies": {
     "mocha":             "~1.10"
