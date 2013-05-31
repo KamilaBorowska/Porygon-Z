@@ -17,7 +17,8 @@
     "underscore.string": "~2.3",
     "matheval":          "~1",
     "node-random":       "~0",
-    "node-xmpp":         "~0.4"
+    "node-xmpp":         "~0.4",
+    "jugglingdb":        "~0.2"
   },
   "devDependencies": {
     "mocha":             "~1.10"

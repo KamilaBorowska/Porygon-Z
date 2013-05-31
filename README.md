@@ -24,6 +24,10 @@ names are used by the plugin.
     whatever the calculator shows the results in other bases.
 * `version`
   * `version` - shows pointless version information. Yep.
+* `tell`
+  * `tell` - informs other users when they are away.
+  * `tellCheck` - event parser to actually inform users. Needed if you
+    want `tell` that actually does work.
 
 ## Installation
 

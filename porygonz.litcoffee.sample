@@ -27,6 +27,11 @@ to what user says, and responding to it. Some servers might have
 different plugins for various channels. For example in IRC, you can
 load separate plugins for channel `#a` and channel `#b`.
 
+Some plugins also need event parsers. The event parsers can react on
+anything, including people joining or writing. They can slow down the
+bot, but usually it isn't really noticeable (when event parser is well
+written, that is).
+
 By default, the porygon imports `version` plugin. It's almost useless
 plugin that shows current PorygonZ version after typing `version`
 command. Of course, you are encouraged to change it.
@@ -41,14 +46,23 @@ hints if it will find the command that is similar to yours.
 
     {commandNotFound} = require 'porygonz/plugins/command-not-found'
 
+Some plugins require database connection. You can specify it here.
+Check [jugglingdb's documentation] for more details.
+
+    db =
+      driver: 'sqlite3'
+      database: 'porygonz.db'
+
 Next, we can make server instances wrapped in `Container` objects, and
 store them in `containers` array for convienence.
 
     containers = [
       new Container
         plugins: plugins
+        eventParsers: []
         commandNotFound: commandNotFound()
         prefix: /SampleBot?\b[:,]?\s*/i
+        database: db
         server: new IRC
           server: 'irc.freenode.net'
           channels: ['#botters-test']
@@ -58,7 +72,9 @@ store them in `containers` array for convienence.
 
       new Container
         plugins: plugins
+        eventParsers: []
         commandNotFound: commandNotFound()
+        database: db
         server: new Console
 
 XMPP container needs some setup (like creating initial account), so
@@ -76,3 +92,5 @@ After that, we can start every container using `for in` loop.
 
     for container in containers
       container.connect()
+
+[jugglingdb's documentation]: https://github.com/1602/jugglingdb/blob/master/README.md
