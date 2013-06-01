@@ -24,6 +24,11 @@ did in YIBot.
           else
             @emit 'channel', {user, message, channel: target}
 
+        if @config.nickServPassword
+          @client.on 'motd', =>
+            message = "identify #{@config.nickServPassword}"
+            @pm message, @config.nickServUsername or 'NickServ'
+
       say: (message, channel) ->
         @client.say channel, message
 

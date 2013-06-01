@@ -69,6 +69,7 @@ store them in `containers` array for convienence.
           nick: 'SampleBot'
           userName: 'samplebot'
           realName: 'SampleBot, version'
+          nickServPassword: 'swordfish'
 
       new Container
         plugins: plugins
