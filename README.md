@@ -95,8 +95,8 @@ syntax. To learn more about them, check out
 It contains a short tutorial for regular expressions.
 
 If you still cannot survive regular expressions, you can put string
-here. It's less flexible, but it works. Mostly. Please note that
-prefixes are only needed for conferences/channels, but they are removed
+here. It's less flexible, but it works. Please note that prefixes are
+only needed for conferences/channels, but they are removed
 automatically if you will use them anyway in private messages.
 
 ## Running
