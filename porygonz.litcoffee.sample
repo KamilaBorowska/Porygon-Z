@@ -46,13 +46,6 @@ hints if it will find the command that is similar to yours.
 
     {commandNotFound} = require 'porygonz/plugins/command-not-found'
 
-Some plugins require database connection. You can specify it here.
-Check [jugglingdb's documentation] for more details.
-
-    db =
-      driver: 'sqlite3'
-      database: 'porygonz.db'
-
 Next, we can make server instances wrapped in `Container` objects, and
 store them in `containers` array for convienence.
 
@@ -62,7 +55,13 @@ store them in `containers` array for convienence.
         eventParsers: []
         commandNotFound: commandNotFound()
         prefix: /SampleBot?\b[:,]?\s*/i
-        database: db
+		
+Some plugins require database connection. You can specify it here.
+Check [jugglingdb's documentation] for more details.
+		
+        database:
+          driver: 'sqlite3'
+          database: 'samplebot.db'
         server: new IRC
           server: 'irc.freenode.net'
           channels: ['#botters-test']
@@ -75,7 +74,9 @@ store them in `containers` array for convienence.
         plugins: plugins
         eventParsers: []
         commandNotFound: commandNotFound()
-        database: db
+        database:
+          driver: 'sqlite3'
+          database: 'console.db'
         server: new Console
 
 XMPP container needs some setup (like creating initial account), so
