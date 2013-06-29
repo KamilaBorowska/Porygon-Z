@@ -17,12 +17,12 @@
     "underscore.string": "~2.3",
     "matheval":          "~1",
     "node-random":       "~0",
-    "node-xmpp":         "~0.4",
+    "node-xmpp":         "~0.5",
     "jugglingdb":        "~0.2",
     "request":           "~2.21"
   },
   "devDependencies": {
-    "mocha":             "~1.10"
+    "mocha":             "~1.11"
   },
   "scripts": {
     "test":              "mocha --compilers litcoffee:coffee-script"
