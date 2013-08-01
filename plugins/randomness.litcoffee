@@ -16,11 +16,10 @@ passed (because of fake object with prototype), it's always safe.
             @respond "Error: #{error}"
             return
 
-`node-random` returns array of numbers as strings for some reason.
-Because of that, I've to access first element and convert it into
-number by `+` operator.
+`node-random` returns array of numbers.  Because of that, I've to 
+access first element.
 
-          @respond if +data[0] then "Heads" else "Tails"
+          @respond if data[0] then "Heads" else "Tails"
 
       self.help = """
         Throws a coin using random.org for added randomness.
