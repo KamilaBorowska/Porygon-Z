@@ -16,7 +16,7 @@
     "underscore":        "~1.5",
     "underscore.string": "~2.3",
     "matheval":          "~1",
-    "node-random":       "~0",
+    "node-random":       "~0.0.3",
     "node-xmpp":         "~0.5",
     "jugglingdb":        "~0.2",
     "request":           "~2.22"
