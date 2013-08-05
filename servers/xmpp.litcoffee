@@ -30,6 +30,11 @@ conferences was specified in the configuration.
         @client.on 'stanza', (stanza) =>
           {type, from} = stanza.attrs
 
+`from` should be instance of `User`, as it contains user data.
+
+          {User} = require '../user'
+          from = new User nick: from
+
 The message might not have text (for example, presence messages). If
 then, just echo it, so it would appear that PorygonZ listens to you (by
 fake typing, for example), but bot should never respond to errors.
@@ -46,7 +51,7 @@ because they are most likely old.
 
               return if @conferences[from] or stanza.getChild 'delay'
 
-              message.channel = from.substring 0, from.indexOf '/'
+              message.channel = from.nick.substring 0, from.nick.indexOf '/'
               @emit 'channel', message
             else
               @emit 'message', message
