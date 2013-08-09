@@ -24,7 +24,7 @@ Initialize memory database.
     describe 'Tell command', ->
       it 'should claim to save', (done) ->
         call tell, 'i am good', (result) ->
-          assert.equal result, "I will tell i about this.", "Result message"
+          assert.equal result, "I will tell i about this.", "Got result message"
           done()
         , {response: user: 'me', database}
 
