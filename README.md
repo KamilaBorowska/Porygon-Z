@@ -101,7 +101,7 @@ automatically if you will use them anyway in private messages.
 
 ## Running
 
-You need to have CoffeeScript installed globally. After doing that,
-you can do just.
+You need to have CoffeeScript installed globally (or at least in PATH).
+After doing that, you can just run the following command.
 
     coffee porygonz.litcoffee
