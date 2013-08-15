@@ -19,7 +19,7 @@
     "node-random":       "~0.0.3",
     "node-xmpp":         "~0.5",
     "jugglingdb":        "~0.2",
-    "request":           "~2.22"
+    "request":           "~2.26"
   },
   "devDependencies": {
     "mocha":             "~1.12"
