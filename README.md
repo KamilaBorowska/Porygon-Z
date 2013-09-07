@@ -37,7 +37,7 @@ names are used by the plugin.
 If you want to use the stable version, use standard `npm install`
 command.
 
-    npm install PorygonZ
+    npm install porygonz
 
 If you want to use development version, just clone the repository using
 `npm`. Following command should be able to install PorygonZ.
