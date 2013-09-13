@@ -8,7 +8,14 @@ Load prepared schema from database.
 
       {TellMessage} = @database.models
 
+      unless message
+        @respond "You need to specify target and content"
+
       [target, content] = require('strsplit') message, /\s+/, 2
+
+If there is no content specified, automatically write something.
+
+      content or= "You know what I mean."
 
       TellMessage.findOne where: {user: @response.user, target}, (err, message) =>
 
