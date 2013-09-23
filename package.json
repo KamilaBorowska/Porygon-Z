@@ -22,7 +22,7 @@
     "request":           "~2.27"
   },
   "devDependencies": {
-    "mocha":             "~1.12"
+    "mocha":             "~1.13"
   },
   "scripts": {
     "test":              "mocha --compilers litcoffee:coffee-script"
