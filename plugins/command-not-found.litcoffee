@@ -17,10 +17,14 @@ List commands with distance of 2 or lower.
           when new Levenshtein(command, userCommand).distance <= 2
         )
 
+`commands.sort()` has side effects.
+
+        commands.sort()
+
 When the list isn't empty, return possible commands.
 
         if commands.length
-          words = _.toSentence commands.sort(), ", ", " or "
+          words = _.toSentence commands, ", ", " or "
           @respond "Did you mean #{words}?"
         else
           @respond "Command not found"
