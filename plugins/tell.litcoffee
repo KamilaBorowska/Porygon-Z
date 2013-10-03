@@ -30,10 +30,8 @@ instance, instead of creating new message.
 
         @respond "I will tell #{target} about this."
 
-    tell.help = """
-      Tells somebody about something. The first argument is user name,
-      second is what you want to say him.
-    """
+    tell.help = "Tells somebody about something. The first argument is" +
+      " user name, second is what you want to say him."
 
 Define schemas for initial processing.
 
