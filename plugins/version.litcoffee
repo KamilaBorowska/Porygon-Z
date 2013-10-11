@@ -1,4 +1,4 @@
-Plugin responsible for sending version of PorygonZ.
+Plugin responsible for sending version of PorygonZ. ポリゴン is in Japanese.
 
     exports.version = ->
       self = ->
