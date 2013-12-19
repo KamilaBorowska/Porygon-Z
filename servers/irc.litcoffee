@@ -24,6 +24,8 @@ did in YIBot.
           else
             @emit 'channel', {user, message, channel: target}
 
+Allow using NickServ when user wants it.
+
         if @config.nickServPassword
           @client.on 'motd', =>
             message = "identify #{@config.nickServPassword}"
