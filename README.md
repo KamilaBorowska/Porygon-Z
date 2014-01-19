@@ -1,8 +1,8 @@
 PorygonZ
 ========
 
-[![Build Status](https://travis-ci.org/GlitchMr/PorygonZ.png?branch=master)](https://travis-ci.org/GlitchMr/PorygonZ)
-[![Dependency Status](https://gemnasium.com/GlitchMr/PorygonZ.png)](https://gemnasium.com/GlitchMr/PorygonZ)
+[![Build Status](https://travis-ci.org/xfix/PorygonZ.png?branch=master)](https://travis-ci.org/xfix/PorygonZ)
+[![Dependency Status](https://gemnasium.com/xfix/PorygonZ.png)](https://gemnasium.com/xfix/PorygonZ)
 
 The simple bot that sort of works. Initially, it was just an IRC bot,
 but in later releases it got XMPP support. It contains an IRC server
