@@ -3,7 +3,7 @@ representing users.
 
     class exports.User
     
-Specify every `key` from `properties`.
+Specifies every `key` from `properties`.
     
       constructor: (properties) ->
         for property, value of properties
