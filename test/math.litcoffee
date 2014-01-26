@@ -2,7 +2,7 @@ The test for math module. First, we have to import the math module.
 
     {math} = require '../plugins/math'
 
-Also, we need mock class for testing fun stuff.
+Also, we need mock function for testing fun stuff.
 
     {call} = require './meta/call'
 
