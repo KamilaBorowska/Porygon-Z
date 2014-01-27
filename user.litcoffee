@@ -1,5 +1,5 @@
-**user.litcoffee** contains a `User` class intended to be used for
-representing users.
+**user.litcoffee** contains a `User` class intended to be used to
+represent users.
 
     class exports.User
     
