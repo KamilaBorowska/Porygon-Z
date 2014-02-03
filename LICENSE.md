@@ -1,4 +1,4 @@
-The MIT License (MIT)
+The MIT License
 
 Copyright © 2013-2014 Konrad Borowski
 
