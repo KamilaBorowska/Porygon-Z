@@ -17,5 +17,5 @@ The test can generate either "Heads" or "Tails", depending on
 randomness. Both options are allowed to happen, so we have to allow
 both.
 
-          require('assert') result in ['Heads', 'Tails'], "It isn't a coin"
+          require('assert') result in ['Heads', 'Tails'], "Check if it is a coin"
           done()
