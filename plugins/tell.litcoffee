@@ -54,8 +54,15 @@ Define schemas for initial processing.
 
     exports.tellCheck = -> (type, {user}) ->
       return unless user? and type in ['message', 'channel', 'join']
+
+Check if the message exists, and respond if it does. Because this remembers
+the context, it's safe to use it in event.
+
       @database.models.TellMessage.findOne where: target: user, (err, message) =>
         return unless message?
         {user, target, content, date} = message
         @respond "<#{user}> #{target}, #{content}"
+
+Remove the message if it wass mentioned.
+
         message.destroy()
