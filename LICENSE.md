@@ -1,5 +1,3 @@
-The MIT License
-
 Copyright © 2013-2014 Konrad Borowski
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
