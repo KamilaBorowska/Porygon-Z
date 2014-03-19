@@ -8,8 +8,16 @@ Load prepared schema from database.
 
       {TellMessage} = @database.models
 
+If the message contains just command, it's just useless, because it
+doesn't even mention the target.
+
       unless message
         @respond "You need to specify target and content"
+
+I need to use external module in order to split, because otherwise
+too much would be split. The split limits in JavaScript, while
+existing, are completely broken, because they simple eat what you
+don't need.
 
       [target, content] = require('strsplit') message, /\s+/, 2
 
