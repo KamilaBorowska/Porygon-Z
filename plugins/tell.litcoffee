@@ -71,6 +71,6 @@ the context, it's safe to use it in event.
         {user, target, content, date} = message
         @respond "<#{user}> #{target}, #{content}"
 
-Remove the message if it wass mentioned.
+Remove the message if it was mentioned.
 
         message.destroy()
