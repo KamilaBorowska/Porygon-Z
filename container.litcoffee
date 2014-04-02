@@ -57,6 +57,9 @@ The `connect` method connects to server and starts listening.
 
       connect: ->
         @config.server.connect()
+        
+Start listening for messages and channels.
+
         for type in ['message', 'channel']
           do (type) =>
             @config.server.on type, (event) =>
