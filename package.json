@@ -1,7 +1,7 @@
 {
   "author":       "GlitchMr <x.fix@o2.pl>",
   "name":         "porygonz",
-  "homepage":     "https://github.com/GlitchMr/PorygonZ",
+  "homepage":     "https://github.com/xfix/PorygonZ",
   "description":  "IRC/XMPP bot that works",
   "version":      "v0.3.1",
   "license":      "MIT",
