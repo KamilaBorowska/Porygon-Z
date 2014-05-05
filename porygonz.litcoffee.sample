@@ -55,10 +55,10 @@ store them in `containers` array for convienence.
         eventParsers: []
         commandNotFound: commandNotFound()
         prefix: /SampleBot?\b[:,]?\s*/i
-		
+
 Some plugins require database connection. You can specify it here.
 Check [jugglingdb's documentation] for more details.
-		
+
         database:
           driver: 'sqlite3'
           database: 'samplebot.db'
