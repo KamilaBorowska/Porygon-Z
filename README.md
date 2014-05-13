@@ -95,7 +95,7 @@ syntax. To learn more about them, check out
 [regular-expressions.info](http://www.regular-expressions.info/).
 It contains a short tutorial for regular expressions.
 
-If you still cannot survive regular expressions, you can put string
+If you still don't know how to regular expressions, you can put string
 here. It's less flexible, but it works. Please note that prefixes are
 only needed for conferences/channels, but they are removed
 automatically if you will use them anyway in private messages.
