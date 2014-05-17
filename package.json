@@ -2,7 +2,7 @@
   "author":       "Konrad Borowski <x.fix@o2.pl>",
   "name":         "porygonz",
   "homepage":     "https://github.com/xfix/PorygonZ",
-  "description":  "IRC/XMPP bot that works",
+  "description":  "IRC/XMPP bot that may work",
   "version":      "v0.3.1",
   "license":      "MIT",
   "keywords":     [ "irc", "bot", "irc bot", "xmpp", "jabber", "xmpp bot", "jabber bot" ],
